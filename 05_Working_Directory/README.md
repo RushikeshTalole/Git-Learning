@@ -10,16 +10,17 @@ It is also called the working tree.
 
 ## Example
 
-Suppose our Git repository contains:
+Suppose our Git repository contains these folders and files:
 
-Git-Learning
-│
-├── README.md
-├── 01_Git_Introduction
-├── 02_Git_Installation
-└── 05_Working_Directory
+Git-Learning/
+    README.md
+    01_Git_Introduction/
+    02_Git_Installation/
+    03_Git_Config/
+    04_Git_Init/
+    05_Working_Directory/
 
-The `Git-Learning` folder is the working directory of the repository.
+The `Git-Learning` folder is the Working Directory of the repository.
 
 ---
 
