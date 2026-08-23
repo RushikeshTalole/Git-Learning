@@ -97,15 +97,15 @@ This means there are no changes to commit.
 
 Working Directory
         ↓
-git status
+    git add
         ↓
-git add
+ Staging Area
         ↓
-Staging Area
+   git commit
         ↓
-git commit
-        ↓
-Repository
+   Repository
+
+`git status` is used to check the current state at each stage.
 
 ---
 
@@ -117,7 +117,7 @@ A new file that Git is not tracking.
 
 ### 2. Modified
 
-A tracked file has been changed but the changes are not staged.
+A tracked file has been changed, but the changes are not staged.
 
 ### 3. Staged
 
@@ -170,4 +170,5 @@ It means there are no changes waiting to be committed.
 - It shows modified files.
 - It shows staged files.
 - It shows whether the working tree is clean.
-- It is commonly used before `git add` and `git commit`.
+- `git add` moves changes to the Staging Area.
+- `git commit` saves staged changes into the Repository.
