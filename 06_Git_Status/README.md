@@ -10,7 +10,7 @@
 
 We use `git status` to check:
 
-- New files
+- Untracked files
 - Modified files
 - Staged files
 - Changes ready for commit
@@ -26,7 +26,7 @@ git status
 
 ## Untracked File
 
-When we create a new file, Git shows it as untracked.
+When we create a new file, Git shows it as an untracked file.
 
 Example:
 
@@ -37,6 +37,8 @@ Output:
 Untracked files:
     README.md
 
+This means Git is not tracking the file yet.
+
 To track the file:
 
 git add README.md
@@ -45,22 +47,22 @@ git add README.md
 
 ## Modified File
 
-When we modify a tracked file:
-
-git status
-
-Git shows:
+When we modify a tracked file, Git shows:
 
 Changes not staged for commit:
     modified: README.md
 
-This means the file is modified but not staged.
+This means the file is modified, but the changes are not staged yet.
+
+To stage the changes:
+
+git add README.md
 
 ---
 
 ## Staged File
 
-After:
+After using:
 
 git add README.md
 
@@ -69,13 +71,17 @@ Git shows:
 Changes to be committed:
     modified: README.md
 
-This means the changes are ready to commit.
+This means the changes are in the Staging Area and are ready to commit.
 
 ---
 
 ## Clean Working Tree
 
 After committing all changes:
+
+git commit -m "Update README"
+
+Then:
 
 git status
 
@@ -103,6 +109,26 @@ Repository
 
 ---
 
+## Important Git Status States
+
+### 1. Untracked
+
+A new file that Git is not tracking.
+
+### 2. Modified
+
+A tracked file has been changed but the changes are not staged.
+
+### 3. Staged
+
+Changes have been added to the Staging Area and are ready to commit.
+
+### 4. Clean
+
+There are no changes to commit.
+
+---
+
 ## Interview Questions
 
 ### 1. What is git status?
@@ -117,11 +143,23 @@ Answer:
 
 An untracked file is a new file that Git is not tracking yet.
 
-### 3. What does "working tree clean" mean?
+### 3. What does "Changes not staged for commit" mean?
 
 Answer:
 
-It means there are no changes to commit.
+It means a tracked file has been modified, but the changes have not been added to the Staging Area.
+
+### 4. What does "Changes to be committed" mean?
+
+Answer:
+
+It means the changes are in the Staging Area and are ready to be committed.
+
+### 5. What does "working tree clean" mean?
+
+Answer:
+
+It means there are no changes waiting to be committed.
 
 ---
 
@@ -132,3 +170,4 @@ It means there are no changes to commit.
 - It shows modified files.
 - It shows staged files.
 - It shows whether the working tree is clean.
+- It is commonly used before `git add` and `git commit`.
