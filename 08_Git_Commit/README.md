@@ -8,7 +8,7 @@
 
 ## Why Do We Use Git Commit?
 
-We use `git commit` to permanently save the changes that are currently in the Staging Area.
+We use `git commit` to save the changes that are currently in the Staging Area.
 
 ---
 
@@ -106,7 +106,7 @@ No. Normally, we use `git add` to stage changes before creating a commit.
 
 Answer:
 
-`git commit -m "message"`
+git commit -m "message"
 
 ---
 
